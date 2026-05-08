@@ -5,6 +5,7 @@
   <title>Jagath Services</title>
 
   <style>
+
     body {
       font-family: Arial, sans-serif;
       background: #f4f7fb;
@@ -19,6 +20,10 @@
       padding: 50px 20px;
     }
 
+    .header h1 {
+      font-size: 42px;
+    }
+
     .section {
       background: white;
       margin: 30px auto;
@@ -29,11 +34,25 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
+    h2 {
+      color: #1e3a8a;
+    }
+
     .service {
       background: #eef2ff;
       margin: 12px 0;
       padding: 15px;
       border-radius: 10px;
+      font-size: 18px;
+    }
+
+    textarea {
+      width: 80%;
+      height: 120px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
     }
 
     .button {
@@ -45,6 +64,12 @@
       text-decoration: none;
       border-radius: 10px;
       font-size: 18px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #1ebd5a;
     }
 
     .footer {
@@ -53,6 +78,7 @@
       background: #111827;
       color: white;
     }
+
   </style>
 </head>
 
@@ -60,31 +86,101 @@
 
   <div class="header">
     <h1>Hi, I'm Jagath</h1>
-    <p>I help with projects and typing work</p>
+
+    <p>
+      I help with projects,
+      typing work,
+      assignments,
+      and computer tasks
+    </p>
   </div>
 
   <div class="section">
 
     <h2>My Services</h2>
 
-    <div class="service">School & College Projects</div>
-    <div class="service">Data Typing / Copy Work</div>
-    <div class="service">Basic Computer Work</div>
+    <div class="service">
+      📘 School & College Projects
+    </div>
+
+    <div class="service">
+      ⌨️ Data Typing / Copy Work
+    </div>
+
+    <div class="service">
+      💻 Basic Computer Work
+    </div>
+
+    <div class="service">
+      📄 Assignment Formatting
+    </div>
+
+  </div>
+
+  <div class="section">
 
     <h2>Contact Me</h2>
 
-    <p>📞 Phone: +917736184680 </p>
+    <p>
+      📞 Phone: 7736184680
+    </p>
 
     <a class="button"
-       href="https://wa.me/917736184680">
+       href="https://wa.me/917736184680"
+       target="_blank">
+
        Chat on WhatsApp
+
     </a>
+
+  </div>
+
+  <div class="section">
+
+    <h2>Send Your Requirement</h2>
+
+    <p>
+      Type your project or typing work details below:
+    </p>
+
+    <textarea id="message"
+    placeholder="Example: I need a biology project typed in PDF format..."></textarea>
+
+    <br>
+
+    <button class="button"
+    onclick="sendMessage()">
+
+      Send Requirement on WhatsApp
+
+    </button>
 
   </div>
 
   <div class="footer">
     © 2026 Jagath Services
   </div>
+
+  <script>
+
+    function sendMessage() {
+
+      var message =
+      document.getElementById('message').value;
+
+      var phone =
+      '917736184680';
+
+      var url =
+      'https://wa.me/' +
+      phone +
+      '?text=' +
+      encodeURIComponent(message);
+
+      window.open(url, '_blank');
+    }
+
+  </script>
 
 </body>
 </html>
