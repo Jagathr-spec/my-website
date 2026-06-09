@@ -1,189 +1,200 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jagath Services</title>
 
-<meta name="google-site-verification" content="V26YBt2BBeGmUm0Gb6zUmvhDaxz7IEOVF87elsTYnl0" />
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
 
-  <title>Jagath Services</title>
+body{
+    background:#0f172a;
+    color:#f8fafc;
+    line-height:1.6;
+}
 
-  <style>
+header{
+    background:linear-gradient(135deg,#1e293b,#0f172a);
+    text-align:center;
+    padding:80px 20px;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+header h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+header p{
+    max-width:700px;
+    margin:auto;
+    color:#cbd5e1;
+    font-size:1.1rem;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+}
+
+.section{
+    background:#1e293b;
+    margin:30px 0;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.section h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.service{
+    background:#334155;
+    padding:18px;
+    margin:12px 0;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.service:hover{
+    transform:translateY(-3px);
+}
+
+textarea{
+    width:100%;
+    height:150px;
+    background:#0f172a;
+    color:white;
+    border:1px solid #475569;
+    border-radius:12px;
+    padding:15px;
+    resize:none;
+}
+
+textarea:focus{
+    outline:none;
+    border-color:#38bdf8;
+}
+
+.btn{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:12px;
+    margin-top:20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.contact{
+    text-align:center;
+}
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+    color:#94a3b8;
+}
+
+@media(max-width:768px){
+    header h1{
+        font-size:2.2rem;
     }
 
-    .header {
-      background: #1e3a8a;
-      color: white;
-      padding: 50px 20px;
+    .section{
+        padding:20px;
     }
-
-    .header h1 {
-      font-size: 42px;
-    }
-
-    .section {
-      background: white;
-      margin: 30px auto;
-      width: 85%;
-      max-width: 700px;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #1e3a8a;
-    }
-
-    .service {
-      background: #eef2ff;
-      margin: 12px 0;
-      padding: 15px;
-      border-radius: 10px;
-      font-size: 18px;
-    }
-
-    textarea {
-      width: 80%;
-      height: 120px;
-      padding: 10px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 25px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 18px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .button:hover {
-      background: #1ebd5a;
-    }
-
-    .footer {
-      margin-top: 40px;
-      padding: 20px;
-      background: #111827;
-      color: white;
-    }
-
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <div class="header">
-    <h1>Hi, I'm Jagath</h1>
-
+<header>
+    <h1>JAGATH SERVICES</h1>
     <p>
-      I help with projects,
-      typing work,
-      assignments,
-      and computer tasks
+        Professional Project Assistance, Assignments, Data Entry,
+        Computer Tasks and Online Services.
+        Fast, Reliable and Affordable.
     </p>
-  </div>
+</header>
 
-  <div class="section">
+<div class="container">
 
-    <h2>My Services</h2>
+    <div class="section">
+        <h2>Our Services</h2>
 
-    <div class="service">
-      📘 School & College Projects
+        <div class="service">Project Work Assistance</div>
+        <div class="service">Assignment Formatting</div>
+        <div class="service">Typing & Data Entry</div>
+        <div class="service">Online Form Filling</div>
+        <div class="service">Computer Related Services</div>
+        <div class="service">Document Preparation</div>
     </div>
 
-    <div class="service">
-      ⌨️ Data Typing / Copy Work
+    <div class="section">
+        <h2>Send Your Requirement</h2>
+
+        <textarea id="requirement" placeholder="Describe your requirement here..."></textarea>
+
+        <br>
+
+        <a class="btn" onclick="sendToWhatsapp()">
+            Send via WhatsApp
+        </a>
     </div>
 
-    <div class="service">
-      💻 Basic Computer Work
+    <div class="section contact">
+        <h2>Contact Us</h2>
+
+        <p>Phone / WhatsApp</p>
+        <h3>+91 7736184680</h3>
+
+        <a href="https://wa.me/917736184680" class="btn">
+            Chat on WhatsApp
+        </a>
     </div>
 
-    <div class="service">
-      📄 Assignment Formatting
-    </div>
+</div>
 
-  </div>
+<footer>
+    © 2026 Jagath Services. All Rights Reserved.
+</footer>
 
-  <div class="section">
+<script>
+function sendToWhatsapp() {
+    let text = document.getElementById("requirement").value;
 
-    <h2>Contact Me</h2>
-
-    <p>
-      📞 Phone: 7736184680
-    </p>
-
-    <a class="button"
-       href="https://wa.me/917736184680"
-       target="_blank">
-
-       Chat on WhatsApp
-
-    </a>
-
-  </div>
-
-  <div class="section">
-
-    <h2>Send Your Requirement</h2>
-
-    <p>
-      Type your project or typing work details below:
-    </p>
-
-    <textarea id="message"
-    placeholder="Example: I need a biology project typed in PDF format..."></textarea>
-
-    <br><br>
-
-    <button class="button"
-    onclick="sendMessage()">
-
-      Send Requirement on WhatsApp
-
-    </button>
-
-  </div>
-
-  <div class="footer">
-    © 2026 Jagath Services
-  </div>
-
-  <script>
-
-    function sendMessage() {
-
-      var message =
-      document.getElementById('message').value;
-
-      var phone =
-      '917736184680';
-
-      var url =
-      'https://wa.me/' +
-      phone +
-      '?text=' +
-      encodeURIComponent(message);
-
-      window.open(url, '_blank');
+    if(text.trim() === ""){
+        alert("Please enter your requirement.");
+        return;
     }
 
-  </script>
+    let message = encodeURIComponent(text);
+
+    window.open(
+        "https://wa.me/917736184680?text=" + message,
+        "_blank"
+    );
+}
+</script>
 
 </body>
 </html>
