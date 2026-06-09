@@ -1,3 +1,6 @@
+Replace your current index.html with this version (only the service section and script were enhanced):
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,10 +66,12 @@ header p{
     margin:12px 0;
     border-radius:12px;
     transition:0.3s;
+    cursor:pointer;
 }
 
 .service:hover{
     transform:translateY(-3px);
+    background:#475569;
 }
 
 textarea{
@@ -95,6 +100,7 @@ textarea:focus{
     margin-top:20px;
     font-weight:bold;
     transition:0.3s;
+    cursor:pointer;
 }
 
 .btn:hover{
@@ -141,12 +147,17 @@ footer{
     <div class="section">
         <h2>Our Services</h2>
 
-        <div class="service">Project Work Assistance</div>
-        <div class="service">Assignment Formatting</div>
-        <div class="service">Typing & Data Entry</div>
-        <div class="service">Online Form Filling</div>
-        <div class="service">Computer Related Services</div>
-        <div class="service">Document Preparation</div>
+        <div class="service" onclick="contactService('Project Work Assistance')">Project Work Assistance</div>
+
+        <div class="service" onclick="contactService('Assignment Formatting')">Assignment Formatting</div>
+
+        <div class="service" onclick="contactService('Typing & Data Entry')">Typing & Data Entry</div>
+
+        <div class="service" onclick="contactService('Online Form Filling')">Online Form Filling</div>
+
+        <div class="service" onclick="contactService('Computer Related Services')">Computer Related Services</div>
+
+        <div class="service" onclick="contactService('Document Preparation')">Document Preparation</div>
     </div>
 
     <div class="section">
@@ -194,7 +205,19 @@ function sendToWhatsapp() {
         "_blank"
     );
 }
+
+function contactService(serviceName) {
+    let message = encodeURIComponent(
+        "Hello, I am interested in " + serviceName + ". Please provide more details."
+    );
+
+    window.open(
+        "https://wa.me/917736184680?text=" + message,
+        "_blank"
+    );
+}
 </script>
 
 </body>
 </html>
+```
