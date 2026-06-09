@@ -1,223 +1,480 @@
-Replace your current index.html with this version (only the service section and script were enhanced):
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jagath Services</title>
+<title>TRUVORA OFFICIAL</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#0f172a;
-    color:#f8fafc;
-    line-height:1.6;
+background:#0a0f1f;
+color:white;
+overflow-x:hidden;
 }
 
 header{
-    background:linear-gradient(135deg,#1e293b,#0f172a);
-    text-align:center;
-    padding:80px 20px;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+linear-gradient(135deg,#111827,#0f172a,#1e1b4b);
 }
 
-header h1{
-    font-size:3rem;
-    margin-bottom:15px;
+.hero{
+max-width:900px;
+animation:fadeUp 1.2s ease;
 }
 
-header p{
-    max-width:700px;
-    margin:auto;
-    color:#cbd5e1;
-    font-size:1.1rem;
+.hero h1{
+font-size:4rem;
+font-weight:700;
+background:linear-gradient(90deg,#38bdf8,#8b5cf6,#f97316);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.container{
-    width:90%;
-    max-width:1000px;
-    margin:auto;
+.hero h2{
+margin-top:10px;
+font-size:1.4rem;
+color:#cbd5e1;
 }
 
-.section{
-    background:#1e293b;
-    margin:30px 0;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
-}
-
-.section h2{
-    color:#38bdf8;
-    margin-bottom:20px;
-    text-align:center;
-}
-
-.service{
-    background:#334155;
-    padding:18px;
-    margin:12px 0;
-    border-radius:12px;
-    transition:0.3s;
-    cursor:pointer;
-}
-
-.service:hover{
-    transform:translateY(-3px);
-    background:#475569;
-}
-
-textarea{
-    width:100%;
-    height:150px;
-    background:#0f172a;
-    color:white;
-    border:1px solid #475569;
-    border-radius:12px;
-    padding:15px;
-    resize:none;
-}
-
-textarea:focus{
-    outline:none;
-    border-color:#38bdf8;
+.hero p{
+margin-top:20px;
+font-size:1.1rem;
+line-height:1.8;
+color:#d1d5db;
 }
 
 .btn{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:12px;
-    margin-top:20px;
-    font-weight:bold;
-    transition:0.3s;
-    cursor:pointer;
+display:inline-block;
+padding:15px 35px;
+margin-top:30px;
+background:linear-gradient(90deg,#06b6d4,#3b82f6);
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
 }
 
 .btn:hover{
-    transform:scale(1.05);
+transform:translateY(-5px);
 }
 
-.contact{
-    text-align:center;
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+color:#38bdf8;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.service-card{
+background:#111827;
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:.3s;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(59,130,246,.4);
+}
+
+.service-card h3{
+margin-top:15px;
+margin-bottom:10px;
+}
+
+.service-icon{
+font-size:3rem;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat{
+background:#111827;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.stat h3{
+font-size:2.2rem;
+color:#38bdf8;
+}
+
+.portfolio{
+display:grid;.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.testimonial{
+background:#111827;
+padding:25px;
+border-radius:20px;
+border-left:4px solid #38bdf8;
+}
+
+.contact-box{
+background:#111827;
+padding:40px;
+border-radius:25px;
+text-align:center;
+}
+
+.contact-box p{
+margin:12px 0;
+font-size:1.1rem;
 }
 
 footer{
-    background:#020617;
-    text-align:center;
-    padding:25px;
-    margin-top:40px;
-    color:#94a3b8;
+background:#050816;
+padding:30px;
+text-align:center;
+color:#94a3b8;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 0 20px rgba(37,211,102,.5);
+z-index:999;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 @media(max-width:768px){
-    header h1{
-        font-size:2.2rem;
-    }
 
-    .section{
-        padding:20px;
-    }
+.hero h1{
+font-size:2.7rem;
 }
+
+.hero h2{
+font-size:1.1rem;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>JAGATH SERVICES</h1>
-    <p>
-        Professional Project Assistance, Assignments, Data Entry,
-        Computer Tasks and Online Services.
-        Fast, Reliable and Affordable.
-    </p>
-</header>
 
-<div class="container">
+<div class="hero">
 
-    <div class="section">
-        <h2>Our Services</h2>
+<h1>TRUVORA OFFICIAL</h1>
 
-        <div class="service" onclick="contactService('Project Work Assistance')">Project Work Assistance</div>
+<h2>Your Work, Our Priority</h2>
 
-        <div class="service" onclick="contactService('Assignment Formatting')">Assignment Formatting</div>
+<p>
+Smart Support For Students & Organizations.
+Quality Work, On-Time Delivery,
+Client Satisfaction and Affordable Pricing.
+</p>
 
-        <div class="service" onclick="contactService('Typing & Data Entry')">Typing & Data Entry</div>
-
-        <div class="service" onclick="contactService('Online Form Filling')">Online Form Filling</div>
-
-        <div class="service" onclick="contactService('Computer Related Services')">Computer Related Services</div>
-
-        <div class="service" onclick="contactService('Document Preparation')">Document Preparation</div>
-    </div>
-
-    <div class="section">
-        <h2>Send Your Requirement</h2>
-
-        <textarea id="requirement" placeholder="Describe your requirement here..."></textarea>
-
-        <br>
-
-        <a class="btn" onclick="sendToWhatsapp()">
-            Send via WhatsApp
-        </a>
-    </div>
-
-    <div class="section contact">
-        <h2>Contact Us</h2>
-
-        <p>Phone / WhatsApp</p>
-        <h3>+91 7736184680</h3>
-
-        <a href="https://wa.me/917736184680" class="btn">
-            Chat on WhatsApp
-        </a>
-    </div>
+<a href="https://wa.me/917736184680" class="btn">
+Contact Us
+</a>
 
 </div>
 
+</header>
+
+<section>
+
+<h2 class="section-title">
+Our Services
+</h2>
+
+<div class="services">
+
+<div class="service-card">
+<div class="service-icon">📊</div>
+<h3>Presentations</h3>
+<p>Professional PPTs and business presentations.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🎓</div>
+<h3>Projects</h3>
+<p>Academic and professional project support.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">📄</div>
+<h3>Resume</h3>
+<p>Modern ATS-friendly resume creation.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">💻</div>
+<h3>Website Creation</h3>
+<p>Business and portfolio websites.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🛠️</div>
+<h3>Support Services</h3>
+<p>Online assistance and documentation support.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">⌨️</div>
+<h3>Data Entry</h3>
+<p>Typing work and professional documentation.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Why Choose Truvora?
+</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>100%</h3>
+<p>Client Focused</p>
+</div>
+
+<div class="stat">
+<h3>24/7</h3>
+<p>Support</p>
+</div>
+
+<div class="stat">
+<h3>Fast</h3>
+<p>Delivery</p>
+</div>
+
+<div class="stat">
+<h3>Best</h3>
+<p>Quality Service</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Portfolio
+</h2>
+
+<div class="portfolio">
+
+<div class="portfolio-item">
+<h3>Academic Projects</h3>
+<p>Professional student project assistance.</p>
+</div>
+
+<div class="portfolio-item">
+<h3>Business Websites</h3>
+<p>Responsive websites for businesses.</p>
+</div>
+
+<div class="portfolio-item">
+<h3>Resume Design</h3>
+<p>Modern resumes for job seekers.</p>
+</div>
+
+</div>
+
+</section>
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));<section>
+
+<h2 class="section-title">
+Customer Testimonials
+</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>
+"Excellent service. My project was completed before the deadline and the quality was outstanding."
+</p>
+<br>
+<b>- Student Client</b>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>
+"Professional communication and affordable pricing. Highly recommended."
+</p>
+<br>
+<b>- Business Client</b>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>
+"Truvora helped me create a professional resume and website. Great experience."
+</p>
+<br>
+<b>- Happy Customer</b>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+About TRUVORA
+</h2>
+
+<div class="contact-box">
+
+<p>
+TRUVORA OFFICIAL provides professional support services
+for students, entrepreneurs and organizations.
+</p>
+
+<p>
+Our mission is to deliver quality work,
+maintain customer satisfaction,
+and build long-term trust.
+</p>
+
+<p>
+Your Work, Our Priority.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Contact Us
+</h2>
+
+<div class="contact-box">
+
+<p>📞 Phone / WhatsApp</p>
+<p><strong>7736184680</strong></p>
+
+<br>
+
+<p>📧 Email</p>
+<p><strong>truvoraofficial@gmail.com</strong></p>
+
+<br>
+
+<p>📷 Instagram</p>
+<p><strong>@truvoraofficial</strong></p>
+
+<br>
+
+<p>📍 Location</p>
+<p><strong>Kerala, India</strong></p>
+
+<a
+href="https://wa.me/917736184680"
+class="btn"
+target="_blank">
+
+Start Your Project
+
+</a>
+
+</div>
+
+</section>
+
 <footer>
-    © 2026 Jagath Services. All Rights Reserved.
+
+<p>
+© 2026 TRUVORA OFFICIAL
+</p>
+
+<p>
+Your Work, Our Priority
+</p>
+
 </footer>
 
-<script>
-function sendToWhatsapp() {
-    let text = document.getElementById("requirement").value;
+<a
+href="https://wa.me/917736184680"
+class="whatsapp-float"
+target="_blank">
 
-    if(text.trim() === ""){
-        alert("Please enter your requirement.");
-        return;
-    }
+WhatsApp
 
-    let message = encodeURIComponent(text);
-
-    window.open(
-        "https://wa.me/917736184680?text=" + message,
-        "_blank"
-    );
-}
-
-function contactService(serviceName) {
-    let message = encodeURIComponent(
-        "Hello, I am interested in " + serviceName + ". Please provide more details."
-    );
-
-    window.open(
-        "https://wa.me/917736184680?text=" + message,
-        "_blank"
-    );
-}
-</script>
+</a>
 
 </body>
 </html>
-```
+gap:25px;
+}
+
+.portfolio-item{
+background:#111827;
+padding:25px;
+border-radius:20px;
+}
