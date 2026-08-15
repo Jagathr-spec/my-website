@@ -1,480 +1,869 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TRUVORA OFFICIAL</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Truvora Stays | South India</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-background:#0a0f1f;
-color:white;
-overflow-x:hidden;
+:root {
+    --dark: #172019;
+    --gold: #c09a5b;
+    --cream: #f5f1e8;
+    --white: #fffdf8;
+    --gray: #6c726c;
+    --border: #ddd6c8;
 }
 
-header{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:40px;
-background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
-linear-gradient(135deg,#111827,#0f172a,#1e1b4b);
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--cream);
+    color: var(--dark);
 }
 
-.hero{
-max-width:900px;
-animation:fadeUp 1.2s ease;
+/* NAVIGATION */
+
+header {
+    min-height: 90vh;
+    color: white;
+    padding: 28px 7%;
+
+    background:
+        linear-gradient(
+            rgba(10,20,14,0.45),
+            rgba(10,20,14,0.75)
+        ),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.hero h1{
-font-size:4rem;
-font-weight:700;
-background:linear-gradient(90deg,#38bdf8,#8b5cf6,#f97316);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.hero h2{
-margin-top:10px;
-font-size:1.4rem;
-color:#cbd5e1;
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 
-.hero p{
-margin-top:20px;
-font-size:1.1rem;
-line-height:1.8;
-color:#d1d5db;
+.logo span {
+    color: var(--gold);
 }
 
-.btn{
-display:inline-block;
-padding:15px 35px;
-margin-top:30px;
-background:linear-gradient(90deg,#06b6d4,#3b82f6);
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-weight:600;
-transition:.3s;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
 }
 
-.btn:hover{
-transform:translateY(-5px);
+/* HERO */
+
+.hero {
+    max-width: 850px;
+    padding-bottom: 100px;
 }
 
-section{
-padding:80px 10%;
+.eyebrow {
+    color: #dfbd7b;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
 }
 
-.section-title{
-text-align:center;
-font-size:2.5rem;
-margin-bottom:50px;
-color:#38bdf8;
+.hero h1 {
+    font-size: clamp(50px, 8vw, 95px);
+    line-height: 0.95;
+    margin: 20px 0;
 }
 
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+.hero p {
+    font-size: 20px;
+    max-width: 680px;
+    color: #eee;
 }
 
-.service-card{
-background:#111827;
-padding:30px;
-border-radius:20px;
-text-align:center;
-transition:.3s;
-border:1px solid rgba(255,255,255,.08);
+.hero-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    border: 1px solid #dfbd7b;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
 }
 
-.service-card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px rgba(59,130,246,.4);
+/* MAIN */
+
+main {
+    max-width: 1250px;
+    margin: auto;
+    padding: 75px 5%;
 }
 
-.service-card h3{
-margin-top:15px;
-margin-bottom:10px;
+.section-head {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.service-icon{
-font-size:3rem;
+.section-head h2 {
+    font-size: 42px;
+    margin: 10px 0;
 }
 
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+.section-head p {
+    color: var(--gray);
 }
 
-.stat{
-background:#111827;
-padding:30px;
-border-radius:20px;
-text-align:center;
+/* DESTINATIONS */
+
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 80px;
 }
 
-.stat h3{
-font-size:2.2rem;
-color:#38bdf8;
+.destination {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 15px;
 }
 
-.portfolio{
-display:grid;.testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+.destination h3 {
+    font-size: 20px;
+    margin-bottom: 7px;
 }
 
-.testimonial{
-background:#111827;
-padding:25px;
-border-radius:20px;
-border-left:4px solid #38bdf8;
+.destination p {
+    color: var(--gray);
+    font-size: 14px;
 }
 
-.contact-box{
-background:#111827;
-padding:40px;
-border-radius:25px;
-text-align:center;
+/* SEARCH */
+
+.controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 35px;
 }
 
-.contact-box p{
-margin:12px 0;
-font-size:1.1rem;
+input,
+select {
+    padding: 14px 18px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: white;
+    font-size: 15px;
 }
 
-footer{
-background:#050816;
-padding:30px;
-text-align:center;
-color:#94a3b8;
+input {
+    flex: 1;
 }
 
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 0 20px rgba(37,211,102,.5);
-z-index:999;
+/* HOTEL GRID */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(50px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+.card {
+    background: var(--white);
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
 }
 
-@media(max-width:768px){
-
-.hero h1{
-font-size:2.7rem;
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
-.hero h2{
-font-size:1.1rem;
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
 }
 
-.section-title{
-font-size:2rem;
+.card-body {
+    padding: 23px;
 }
 
+.tag {
+    color: #9a7537;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
+.card h3 {
+    font-size: 24px;
+    margin: 8px 0 3px;
+}
+
+.location {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 17px 0;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.price small {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.rating {
+    font-size: 13px;
+}
+
+.description {
+    color: var(--gray);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    min-height: 65px;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    background: var(--dark);
+    color: white;
+    padding: 13px;
+    margin-top: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--dark);
+    color: white;
+    padding: 65px 7%;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.contact p,
+.contact a {
+    color: #d5d5ce;
+}
+
+.contact a {
+    display: block;
+    margin-top: 8px;
+    text-decoration: none;
+}
+
+footer {
+    background: #101510;
+    color: #999;
+    text-align: center;
+    padding: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media(max-width: 900px) {
+
+    .destinations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+
+    nav a {
+        display: none;
+    }
+
+    header {
+        min-height: 80vh;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .destinations,
+    .grid,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    input,
+    select {
+        width: 100%;
+    }
+}
 </style>
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
+
+<nav>
+
+<div class="logo">
+TRUVORA <span>STAYS</span>
+</div>
+
+<div>
+<a href="#destinations">Destinations</a>
+<a href="#stays">Stays</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
 
 <div class="hero">
 
-<h1>TRUVORA OFFICIAL</h1>
+<div class="eyebrow">
+South India • Curated Stays
+</div>
 
-<h2>Your Work, Our Priority</h2>
+<h1>
+Stay somewhere<br>
+worth remembering.
+</h1>
 
 <p>
-Smart Support For Students & Organizations.
-Quality Work, On-Time Delivery,
-Client Satisfaction and Affordable Pricing.
+Discover beautiful hill stations, peaceful beaches and
+remarkable heritage destinations across South India,
+curated by Truvora Stays.
 </p>
 
-<a href="https://wa.me/917736184680" class="btn">
-Contact Us
+<a href="#stays" class="hero-btn">
+Explore Stays ↓
 </a>
 
 </div>
 
 </header>
 
-<section>
 
-<h2 class="section-title">
-Our Services
+<!-- ================= MAIN ================= -->
+
+<main>
+
+<!-- DESTINATIONS -->
+
+<section id="destinations">
+
+<div class="section-head">
+
+<div class="eyebrow">
+Explore
+</div>
+
+<h2>
+Destinations
 </h2>
 
-<div class="services">
+<p>
+From misty mountains to coastal escapes and historic cities.
+</p>
 
-<div class="service-card">
-<div class="service-icon">📊</div>
-<h3>Presentations</h3>
-<p>Professional PPTs and business presentations.</p>
 </div>
 
-<div class="service-card">
-<div class="service-icon">🎓</div>
-<h3>Projects</h3>
-<p>Academic and professional project support.</p>
+
+<div class="destinations">
+
+<div class="destination">
+
+<h3>
+Scenic Hill Stations
+</h3>
+
+<p>
+Munnar • Ooty • Coorg • Wayanad
+</p>
+
 </div>
 
-<div class="service-card">
-<div class="service-icon">📄</div>
-<h3>Resume</h3>
-<p>Modern ATS-friendly resume creation.</p>
+
+<div class="destination">
+
+<h3>
+Beaches & Water
+</h3>
+
+<p>
+Alleppey • Varkala • Gokarna • Pondicherry
+</p>
+
 </div>
 
-<div class="service-card">
-<div class="service-icon">💻</div>
-<h3>Website Creation</h3>
-<p>Business and portfolio websites.</p>
+
+<div class="destination">
+
+<h3>
+History & Culture
+</h3>
+
+<p>
+Hampi • Madurai • Mysore
+</p>
+
 </div>
 
-<div class="service-card">
-<div class="service-icon">🛠️</div>
-<h3>Support Services</h3>
-<p>Online assistance and documentation support.</p>
-</div>
 
-<div class="service-card">
-<div class="service-icon">⌨️</div>
-<h3>Data Entry</h3>
-<p>Typing work and professional documentation.</p>
+<div class="destination">
+
+<h3>
+Curated Budget
+</h3>
+
+<p>
+Comfortable stays from ₹2,000+
+</p>
+
 </div>
 
 </div>
 
 </section>
 
-<section>
 
-<h2 class="section-title">
-Why Choose Truvora?
+<!-- ================= STAYS ================= -->
+
+<section id="stays">
+
+<div class="section-head">
+
+<div class="eyebrow">
+Handpicked Collection
+</div>
+
+<h2>
+Featured Stays
 </h2>
 
-<div class="stats">
+<p>
+Find your next South Indian escape.
+</p>
 
-<div class="stat">
-<h3>100%</h3>
-<p>Client Focused</p>
 </div>
 
-<div class="stat">
-<h3>24/7</h3>
-<p>Support</p>
+
+<div class="controls">
+
+<input
+id="search"
+type="search"
+placeholder="Search Munnar, Ooty, resort..."
+>
+
+<select id="category">
+
+<option value="all">
+All Categories
+</option>
+
+<option value="Hill Station">
+Hill Stations
+</option>
+
+<option value="Beach & Water">
+Beach & Water
+</option>
+
+<option value="History & Culture">
+History & Culture
+</option>
+
+</select>
+
 </div>
 
-<div class="stat">
-<h3>Fast</h3>
-<p>Delivery</p>
-</div>
 
-<div class="stat">
-<h3>Best</h3>
-<p>Quality Service</p>
-</div>
-
+<div class="grid" id="grid">
 </div>
 
 </section>
 
-<section>
+</main>
 
-<h2 class="section-title">
-Portfolio
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<div>
+
+<div class="eyebrow">
+Truvora Stays
+</div>
+
+<h2>
+South India,<br>
+beautifully stayed.
 </h2>
 
-<div class="portfolio">
-
-<div class="portfolio-item">
-<h3>Academic Projects</h3>
-<p>Professional student project assistance.</p>
-</div>
-
-<div class="portfolio-item">
-<h3>Business Websites</h3>
-<p>Responsive websites for businesses.</p>
-</div>
-
-<div class="portfolio-item">
-<h3>Resume Design</h3>
-<p>Modern resumes for job seekers.</p>
-</div>
-
-</div>
-
-</section>
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));<section>
-
-<h2 class="section-title">
-Customer Testimonials
-</h2>
-
-<div class="testimonials">
-
-<div class="testimonial">
-⭐⭐⭐⭐⭐
 <p>
-"Excellent service. My project was completed before the deadline and the quality was outstanding."
-</p>
-<br>
-<b>- Student Client</b>
-</div>
-
-<div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>
-"Professional communication and affordable pricing. Highly recommended."
-</p>
-<br>
-<b>- Business Client</b>
-</div>
-
-<div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>
-"Truvora helped me create a professional resume and website. Great experience."
-</p>
-<br>
-<b>- Happy Customer</b>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">
-About TRUVORA
-</h2>
-
-<div class="contact-box">
-
-<p>
-TRUVORA OFFICIAL provides professional support services
-for students, entrepreneurs and organizations.
-</p>
-
-<p>
-Our mission is to deliver quality work,
-maintain customer satisfaction,
-and build long-term trust.
-</p>
-
-<p>
-Your Work, Our Priority.
+Curated stays for travellers looking for
+comfort, scenery and memorable experiences.
 </p>
 
 </div>
 
-</section>
 
-<section>
+<div>
 
-<h2 class="section-title">
-Contact Us
-</h2>
+<h3>
+Contact
+</h3>
 
-<div class="contact-box">
+<a href="tel:+917736184680">
++91 77361 84680
+</a>
 
-<p>📞 Phone / WhatsApp</p>
-<p><strong>7736184680</strong></p>
-
-<br>
-
-<p>📧 Email</p>
-<p><strong>truvoraofficial@gmail.com</strong></p>
-
-<br>
-
-<p>📷 Instagram</p>
-<p><strong>@truvoraofficial</strong></p>
-
-<br>
-
-<p>📍 Location</p>
-<p><strong>Kerala, India</strong></p>
-
-<a
-href="https://wa.me/917736184680"
-class="btn"
-target="_blank">
-
-Start Your Project
-
+<a href="mailto:jagathr008@gmail.com">
+jagathr008@gmail.com
 </a>
 
 </div>
 
+
+<div>
+
+<h3>
+Destinations
+</h3>
+
+<p>
+Munnar • Ooty • Wayanad<br>
+Varkala • Alleppey • Hampi<br>
+Mysore • Pondicherry
+</p>
+
+</div>
+
 </section>
+
 
 <footer>
 
-<p>
-© 2026 TRUVORA OFFICIAL
-</p>
-
-<p>
-Your Work, Our Priority
-</p>
+© 2026 Truvora Stays.
+All rights reserved.
 
 </footer>
 
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+const stays = [
+
+{
+name: "Fragrant Nature Munnar",
+place: "Munnar, Kerala",
+category: "Hill Station",
+price: "₹8,764",
+rating: "4.6",
+reviews: "2.7K",
+type: "5-star hotel",
+
+image:
+"https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1000&q=80",
+
+description:
+"Valley views, spa facilities and comfortable rooms in the beautiful hills of Munnar."
+},
+
+
+{
+name: "Hotel Darshan Ooty",
+place: "Ooty, Tamil Nadu",
+category: "Hill Station",
+price: "₹2,804",
+rating: "4.1",
+reviews: "3.6K",
+type: "3-star hotel",
+
+image:
+"https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1000&q=80",
+
+description:
+"A comfortable Ooty stay close to the central lake and public transport."
+},
+
+
+{
+name: "Dune de L'Orient Pondicherry",
+place: "Pondicherry",
+category: "Beach & Water",
+price: "₹4,482",
+rating: "4.3",
+reviews: "633",
+type: "3-star hotel",
+
+image:
+"https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80",
+
+description:
+"French-style heritage atmosphere in White Town, close to the historic French Quarter."
+},
+
+
+{
+name: "Clafouti Beach Resort Varkala",
+place: "Varkala, Kerala",
+category: "Beach & Water",
+price: "₹1,716",
+rating: "4.0",
+reviews: "4.7K",
+type: "3-star hotel",
+
+image:
+"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+
+description:
+"A relaxed coastal stay near Varkala's famous cliff and Arabian Sea views."
+},
+
+
+{
+name: "Clarks Inn Hampi",
+place: "Hampi, Karnataka",
+category: "History & Culture",
+price: "₹4,559",
+rating: "3.9",
+reviews: "3.1K",
+type: "3-star hotel",
+
+image:
+"https://images.unsplash.com/photo-1600100397608-f010a5f1b7f8?auto=format&fit=crop&w=1000&q=80",
+
+description:
+"A convenient base for exploring Hampi's temples, ruins and historic landscape."
+}
+
+];
+
+
+const grid = document.getElementById("grid");
+
+const search = document.getElementById("search");
+
+const category = document.getElementById("category");
+
+
+function displayStays() {
+
+const searchText =
+search.value.toLowerCase();
+
+const selectedCategory =
+category.value;
+
+
+const filtered =
+stays.filter(stay => {
+
+const matchesSearch =
+
+(
+stay.name +
+" " +
+stay.place +
+" " +
+stay.category +
+" " +
+stay.type
+)
+.toLowerCase()
+.includes(searchText);
+
+
+const matchesCategory =
+
+selectedCategory === "all" ||
+stay.category === selectedCategory;
+
+
+return matchesSearch && matchesCategory;
+
+});
+
+
+grid.innerHTML = "";
+
+
+if(filtered.length === 0) {
+
+grid.innerHTML = `
+
+<div style="
+grid-column:1/-1;
+text-align:center;
+padding:50px;
+color:#6c726c;
+">
+
+No stays found.<br>
+Try another destination.
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+filtered.forEach(stay => {
+
+grid.innerHTML += `
+
+<article class="card">
+
+<div
+class="card-img"
+style="
+background-image:url('${stay.image}')
+">
+</div>
+
+
+<div class="card-body">
+
+<span class="tag">
+${stay.category}
+</span>
+
+
+<h3>
+${stay.name}
+</h3>
+
+
+<div class="location">
+${stay.place}
+</div>
+
+
+<div class="meta">
+
+<span class="price">
+${stay.price}
+
+<small>
+/ night
+</small>
+
+</span>
+
+
+<span class="rating">
+★ ${stay.rating}
+(${stay.reviews})
+</span>
+
+</div>
+
+
+<div class="location">
+${stay.type}
+</div>
+
+
+<p class="description">
+${stay.description}
+</p>
+
+
 <a
-href="https://wa.me/917736184680"
-class="whatsapp-float"
-target="_blank">
-
-WhatsApp
-
+href="tel:+917736184680"
+class="btn"
+>
+Enquire About This Stay
 </a>
+
+</div>
+
+</article>
+
+`;
+
+});
+
+}
+
+
+search.addEventListener(
+"input",
+displayStays
+);
+
+category.addEventListener(
+"change",
+displayStays
+);
+
+
+displayStays();
+
+</script>
 
 </body>
 </html>
-gap:25px;
-}
-
-.portfolio-item{
-background:#111827;
-padding:25px;
-border-radius:20px;
-}
